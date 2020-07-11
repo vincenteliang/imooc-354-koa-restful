@@ -1,0 +1,26 @@
+{
+  "name": "koa-restful",
+  "version": "1.0.0",
+  "description": "课程链接 &lt;https://coding.imooc.com/class/354.html>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincenteliang/koa-restful.git"
+  },
+  "author": "vincente",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincenteliang/koa-restful/issues"
+  },
+  "homepage": "https://github.com/vincenteliang/koa-restful#readme",
+  "dependencies": {
+    "koa": "^2.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
