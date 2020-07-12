@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/vincenteliang/koa-restful#readme",
   "dependencies": {
-    "koa": "^2.13.0"
+    "koa": "^2.13.0",
+    "koa-router": "^9.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
