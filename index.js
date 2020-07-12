@@ -30,5 +30,6 @@ usersRouter.get('/:id', auth, (ctx) => {
 
 app.use(router.routes());
 app.use(usersRouter.routes());
+app.use(usersRouter.allowedMethods());
 
 app.listen(3000);
