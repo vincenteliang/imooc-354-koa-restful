@@ -180,7 +180,7 @@ REST：**Re**presentational **S**tate **T**ransfer
 
 #### 编写Hello World
 
-[commit](https://github.com/vincenteliang/koa-restful/commit/81a902b36fec79c38d47099d33400bee46f2f790)
+[代码](https://github.com/vincenteliang/koa-restful/commit/81a902b36fec79c38d47099d33400bee46f2f790)
 
 #### 自动重启
 
@@ -205,11 +205,11 @@ REST：**Re**presentational **S**tate **T**ransfer
 
 获取两个GitHub的接口并返回
 
-[commit](https://github.com/vincenteliang/koa-restful/commit/7a28c4d7dfcc24334934c0eff59816a28f0c8bea)
+[代码](https://github.com/vincenteliang/koa-restful/commit/7a28c4d7dfcc24334934c0eff59816a28f0c8bea)
 
 #### 编写Koa中间件
 
-[commit](https://github.com/vincenteliang/koa-restful/commit/7a28c4d7dfcc24334934c0eff59816a28f0c8bea)
+[代码](https://github.com/vincenteliang/koa-restful/commit/7a28c4d7dfcc24334934c0eff59816a28f0c8bea)
 
 #### 洋葱模型
 
@@ -249,7 +249,7 @@ REST：**Re**presentational **S**tate **T**ransfer
 > - 处理不同的HTTP方法
 > - 解析URL上的参数
 
-[commit](https://github.com/vincenteliang/koa-restful/commit/0035b0a790a662b8182647d45e391b3119114a8d)
+[代码](https://github.com/vincenteliang/koa-restful/commit/0035b0a790a662b8182647d45e391b3119114a8d)
 
 ### 4-3 使用 koa-router 实现路由
 
@@ -259,11 +259,11 @@ REST：**Re**presentational **S**tate **T**ransfer
 
 #### 路由基本功能
 
-[commit](https://github.com/vincenteliang/koa-restful/commit/318d579ce4639b442a12ff18d7a24d03f4e0087f)
+[代码](https://github.com/vincenteliang/koa-restful/commit/318d579ce4639b442a12ff18d7a24d03f4e0087f)
 
 #### 高级路由功能
 
-[commit](https://github.com/vincenteliang/koa-restful/commit/5e417fd9b71027a55291f9d7a51c8a26794dc77d)
+[代码](https://github.com/vincenteliang/koa-restful/commit/5e417fd9b71027a55291f9d7a51c8a26794dc77d)
 
 ### 4-4 HTTP options 方法的作用是什么
 
@@ -282,7 +282,7 @@ REST：**Re**presentational **S**tate **T**ransfer
 - 响应options方法，告诉它所支持的请求方法
 - 相应地返回405（不允许）和501（没实现）
 
-[commit](https://github.com/vincenteliang/koa-restful/commit/f0207fd03319e9bd970dbcac739fb6b66667d61d)
+[代码](https://github.com/vincenteliang/koa-restful/commit/f0207fd03319e9bd970dbcac739fb6b66667d61d)
 
 ### 4-5 RESTful API 最佳实践——增删改查应该返回什么响应
 
@@ -290,7 +290,102 @@ REST：**Re**presentational **S**tate **T**ransfer
 > - 实现增删改查
 > - 返回正确的响应
 
-[commit](https://github.com/vincenteliang/koa-restful/commit/5fdff16e660731945fad42658de902b5bdebb17d)
+[代码](https://github.com/vincenteliang/koa-restful/commit/5fdff16e660731945fad42658de902b5bdebb17d)
+
+## 第5章 Koa 框架的控制器以及设计更合理的目录结构
+
+> 本章主要讲解 Koa 框架的控制器部分的内容。从如何获取 HTTP 的请求参数，到发送 HTTP 的响应，一应俱全。让你明白目录结构是怎么来设计的更合理。
+
+### 5-1 控制器简介
+
+- 什么是控制器？
+  - 拿到路由分配的任务，并执行
+  - 在Koa中，是一个中间件
+- 为什么要用控制器？
+  - 获取HTTP请求参数
+  - 处理业务逻辑
+  - 发送HTTP响应
+- 获取HTTP请求参数
+  - Query String, 如 `?q=keyword`, 一般为可选
+  - Router Params, 如 `/users/:id`, 一般为必选
+  - Body, 如 `{ name： "李雷" }`
+  - Header, 如 `Accept`, `Cookie`
+- 发送HTTP响应
+  - 发送Status，如`200`/`400`等
+  - 发送Body，如`{ name："李雷" }`
+  - 发送Header，如`Allow`、`Content-Type`
+- 编写控制器最佳实践
+  - 每个资源的控制器放在不同的文件里
+  - 尽量使用 类+类方法 的形式编写控制器
+  - 严谨的错误处理
+
+### 5-2 获取 HTTP 请求参数
+
+> 操作步骤
+> - 学习断点调试
+> - 获取query (ctx.query)
+> - 获取router params (ctx.params)
+> - 获取body (ctx.request.body)
+> - 获取header (ctx.header)
+
+#### 断点调试
+
+VSCode中按F5进入调试并设置断点
+
+#### 获取body
+
+koa不支持解析请求体，需要引入中间件**koa-bodyparser**
+
+`npm i koa-bodyparser --save`
+
+[代码](https://github.com/vincenteliang/koa-restful/commit/98e21309f4211dd84adece36baeb2762429bf56e)
+
+### 5-3 发送 HTTP 响应
+
+> 操作步骤
+> - 发送 status
+> - 发送 body
+> - 发送 header
+> - 实现用户的增删改查
+
+#### 发送 status & body
+
+`ctx.status = 204;`
+
+`ctx.body = '<h1>这是主页</h1>';`
+
+#### 发送 header
+
+[代码](https://github.com/vincenteliang/koa-restful/commit/fd4c2302270c0094bd30778b4eff611e4b1ca48b)
+
+#### 实现用户的增删改查
+
+[代码](https://github.com/vincenteliang/koa-restful/commit/fd4c2302270c0094bd30778b4eff611e4b1ca48b)
+
+### 5-4 更合理的目录结构
+
+> 操作步骤
+> - 将路由单独放在一个目录
+> - 将控制器单独放在一个目录
+> - 使用 类+类方法 的方式组织控制器
+
+新建总文件夹`/app`，并修改入口文件
+
+```json package.json
+"scripts": {
+    "start": "nodemon app"
+}
+```
+
+- /app
+  - /routes
+    - home.js
+    - users.js
+  - /controllers
+    - home.js
+    - users.js
+
+[代码](https://github.com/vincenteliang/koa-restful/commit/49e15bcd9d9fcd3d45fe93895c33dc6315238cc6)
 
 
 <!-- [commit]() -->
