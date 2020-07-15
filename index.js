@@ -1,8 +1,9 @@
 const koa = require('koa');
-const Router = require('koa-router')
+const bodyparser = require('koa-bodyparser');
+const Router = require('koa-router');
 const app = new koa();
 const router = new Router();
-const usersRouter = new Router({ prefix: '/users' })
+const usersRouter = new Router({ prefix: '/users' });
 
 router.get('/', (ctx) => {
     ctx.body = '这是主页';
@@ -28,6 +29,7 @@ usersRouter.delete('/:id', (ctx) => {
     ctx.status = 204;
 });
 
+app.use(bodyparser());
 app.use(router.routes());
 app.use(usersRouter.routes());
 app.use(usersRouter.allowedMethods());
