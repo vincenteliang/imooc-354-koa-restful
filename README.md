@@ -387,5 +387,60 @@ koa不支持解析请求体，需要引入中间件**koa-bodyparser**
 
 [代码](https://github.com/vincenteliang/koa-restful/commit/49e15bcd9d9fcd3d45fe93895c33dc6315238cc6)
 
+## 第6章 多种方案实现错误处理机制
+
+> 本章主要讲解多种方案的错误处理。主要分三方面，一是 Koa 框架自带的错误处理，一是编写错误处理中间件，一是使用优秀的错误处理中间件。
+
+### 6-1 错误处理简介
+
+- 什么是错误处理？
+  - 编程语言或计算机硬件里的一种机制
+  - 处理软件或信息系统中出现的异常状况
+- 异常状况有哪些？
+  - 运行时错误，都返回500
+  - 逻辑错误，如找不到（404）、先决条件失败（412）、无法处理的实体（参数格式不对，422）等
+- 为什么要用错误处理？
+  - 防止程序挂掉
+  - 告诉用户错误信息
+  - 便于开发者调试
+
+### 6-2 Koa 自带的错误处理
+
+> 操作步骤
+> - 制造404、412、500三种错误
+> - 了解Koa自带的错误处理做了什么
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/777be207afd1e821569682b65c84d47b421ced79)
+
+### 6-3 自己编写错误处理中间件
+
+> 操作步骤
+> - 自己编写错误处理中间件
+> - 制造404、412、500三种错误来测试
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/90ad115d162f2d20aec649ccbaf800cbd925ad74)
+
+### 6-4 使用 koa-json-error 进行错误处理
+
+> 操作步骤
+> - 安装koa-json-error
+> - 使用koa-json-error的默认配置处理错误
+> - 修改配置使其在生产环境下禁用错误堆栈的返回
+
+`npm i koa-json-error --save`
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/bb723d89a8ea3a5e7129e0bda27f7c78b35d4eca)
+
+### 6-5 使用 koa-parameter 校验参数
+
+> 操作步骤
+> - 安装koa一parameter
+> - 使用koa一parameter校验参数
+> - 制造422错误来测试校验结果
+
+`npm i koa-parameter --save`
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/e6ea2ac4cd3ac96dd1be9673856cc9db9beffa60)
+
 
 <!-- [commit]() -->
