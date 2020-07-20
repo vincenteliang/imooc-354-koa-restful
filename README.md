@@ -442,5 +442,95 @@ koa不支持解析请求体，需要引入中间件**koa-bodyparser**
 
 [commit](https://github.com/vincenteliang/koa-restful/commit/e6ea2ac4cd3ac96dd1be9673856cc9db9beffa60)
 
+## 第7章 第一批用户入库啦~~
+
+> 本章主要讲解 NoSQL 概念以及 MongoDB 数据库的理论与入门实践。通过 MongoDB Atlas 云数据库学习 MongoDB 的增删改查等常见操作。
+
+### 7-1 NoSQL 简介
+
+- 什么是NoSQL
+  - 对不同于传统的关系型数据库的数据库管理系统的统称
+- NoSQL数据库的分类
+  - 列存储（HBase）
+  - 文档存储（MongoDB）
+  - Key-value存储（Redis）
+  - 图存储（FlockDB）
+  - 对象存储（db4o）
+  - XML存储（BaseX）
+- 为什么要用NoSQL
+  - 简单（没有原子性、一致性、隔离性等复杂规范）
+  - 便于横向拓展
+  - 适合超大规模数据的存储
+  - 很灵活地存储复杂结构的数据（Schema Free）
+
+### 7-2 MongoDB 简介
+
+- 什么是MongoDB ？
+  - 来自于英文单词"Humongous”， 中文含义为"庞大”
+  - 面向文档存储的开源数据库
+  - 由C++编写而成
+- 为什么要用MongoDB ？
+  - 性能好（内存计算）
+  - 大规模数据存储（可拓展性）
+  - 可靠安全（本地复制、自动故障转移）
+  - 方便存储复杂数据结构（Schema Free）
+
+### 7-3 云数据库——MongoDB Atlas
+
+> 操作步骤
+> - 注册用户
+> - 创建集群
+> - 添加数据库用户
+> - 设置IP地址白名单
+> - 获取连接地址
+
+如果连接mongodb过程中出现以下错误，可以尝试设置付款方式
+
+```
+Error: querySrv ESERVFAIL _mongodb._tcp.vincentebase.yqjup.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (dns.js:203:19) {
+  errno: 'ESERVFAIL',
+  code: 'ESERVFAIL',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.vincentebase.yqjup.mongodb.net'
+}
+
+Error: queryTxt ESERVFAIL vincentebase.yqjup.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (dns.js:203:19) {
+  errno: 'ESERVFAIL',
+  code: 'ESERVFAIL',
+  syscall: 'queryTxt',
+  hostname: 'vincentebase.yqjup.mongodb.net'
+}
+```
+
+[stackoverflow](https://stackoverflow.com/questions/50362647/connecting-to-mongodb-atlas-from-firebase-functions/58822693#58822693?newreg=a3af857c5c944c34a5f48ff365b97c0e)上的回答
+
+### 7-4 使用 Mongoose 连接 MongoDB
+
+> 操作步骤
+> - 安装 Mong oose
+> - 用 Mongoose 连接 MongoDB
+
+`npm i mongoose --save`
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/af0f695574c86e45be5125a9dbadf8f835c0399d)
+
+### 7-5 设计用户模块的 Schema
+
+> 操作步骤
+> - 分析用户模块的属性
+> - 编写用户模块的Schema
+> - 使用Schema生成用户Model
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/7bd39c25ba777cf0027a1f41e3b0a0d8b2150e75)
+
+### 7-6 用 MongoDB 实现用户的增删改查
+
+> 操作步骤
+> - 用Mongoose实现增删改查接口
+> - 用Postman测试增删改查接口
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/b83cff0e2fbbb85334b6cacb45387aa86d31fc84)
 
 <!-- [commit]() -->
