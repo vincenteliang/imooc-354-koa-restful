@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/vincenteliang/koa-restful#readme",
   "dependencies": {
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-json-error": "^3.1.2",
