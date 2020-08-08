@@ -180,7 +180,7 @@ REST：**Re**presentational **S**tate **T**ransfer
 
 #### 编写Hello World
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/81a902b36fec79c38d47099d33400bee46f2f790)
+[commit](https://github.com/vincenteliang/koa-restful/commit/81a902b36fec79c38d47099d33400bee46f2f790)
 
 #### 自动重启
 
@@ -205,11 +205,11 @@ REST：**Re**presentational **S**tate **T**ransfer
 
 获取两个GitHub的接口并返回
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/7a28c4d7dfcc24334934c0eff59816a28f0c8bea)
+[commit](https://github.com/vincenteliang/koa-restful/commit/7a28c4d7dfcc24334934c0eff59816a28f0c8bea)
 
 #### 编写Koa中间件
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/7a28c4d7dfcc24334934c0eff59816a28f0c8bea)
+[commit](https://github.com/vincenteliang/koa-restful/commit/7a28c4d7dfcc24334934c0eff59816a28f0c8bea)
 
 #### 洋葱模型
 
@@ -249,7 +249,7 @@ REST：**Re**presentational **S**tate **T**ransfer
 > - 处理不同的HTTP方法
 > - 解析URL上的参数
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/0035b0a790a662b8182647d45e391b3119114a8d)
+[commit](https://github.com/vincenteliang/koa-restful/commit/0035b0a790a662b8182647d45e391b3119114a8d)
 
 ### 4-3 使用 koa-router 实现路由
 
@@ -259,11 +259,11 @@ REST：**Re**presentational **S**tate **T**ransfer
 
 #### 路由基本功能
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/318d579ce4639b442a12ff18d7a24d03f4e0087f)
+[commit](https://github.com/vincenteliang/koa-restful/commit/318d579ce4639b442a12ff18d7a24d03f4e0087f)
 
 #### 高级路由功能
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/5e417fd9b71027a55291f9d7a51c8a26794dc77d)
+[commit](https://github.com/vincenteliang/koa-restful/commit/5e417fd9b71027a55291f9d7a51c8a26794dc77d)
 
 ### 4-4 HTTP options 方法的作用是什么
 
@@ -282,7 +282,7 @@ REST：**Re**presentational **S**tate **T**ransfer
 - 响应options方法，告诉它所支持的请求方法
 - 相应地返回405（不允许）和501（没实现）
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/f0207fd03319e9bd970dbcac739fb6b66667d61d)
+[commit](https://github.com/vincenteliang/koa-restful/commit/f0207fd03319e9bd970dbcac739fb6b66667d61d)
 
 ### 4-5 RESTful API 最佳实践——增删改查应该返回什么响应
 
@@ -290,7 +290,7 @@ REST：**Re**presentational **S**tate **T**ransfer
 > - 实现增删改查
 > - 返回正确的响应
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/5fdff16e660731945fad42658de902b5bdebb17d)
+[commit](https://github.com/vincenteliang/koa-restful/commit/5fdff16e660731945fad42658de902b5bdebb17d)
 
 ## 第5章 Koa 框架的控制器以及设计更合理的目录结构
 
@@ -338,7 +338,7 @@ koa不支持解析请求体，需要引入中间件**koa-bodyparser**
 
 `npm i koa-bodyparser --save`
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/98e21309f4211dd84adece36baeb2762429bf56e)
+[commit](https://github.com/vincenteliang/koa-restful/commit/98e21309f4211dd84adece36baeb2762429bf56e)
 
 ### 5-3 发送 HTTP 响应
 
@@ -356,11 +356,11 @@ koa不支持解析请求体，需要引入中间件**koa-bodyparser**
 
 #### 发送 header
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/fd4c2302270c0094bd30778b4eff611e4b1ca48b)
+[commit](https://github.com/vincenteliang/koa-restful/commit/fd4c2302270c0094bd30778b4eff611e4b1ca48b)
 
 #### 实现用户的增删改查
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/fd4c2302270c0094bd30778b4eff611e4b1ca48b)
+[commit](https://github.com/vincenteliang/koa-restful/commit/fd4c2302270c0094bd30778b4eff611e4b1ca48b)
 
 ### 5-4 更合理的目录结构
 
@@ -385,7 +385,7 @@ koa不支持解析请求体，需要引入中间件**koa-bodyparser**
     - home.js
     - users.js
 
-[代码](https://github.com/vincenteliang/koa-restful/commit/49e15bcd9d9fcd3d45fe93895c33dc6315238cc6)
+[commit](https://github.com/vincenteliang/koa-restful/commit/49e15bcd9d9fcd3d45fe93895c33dc6315238cc6)
 
 ## 第6章 多种方案实现错误处理机制
 
@@ -484,9 +484,9 @@ koa不支持解析请求体，需要引入中间件**koa-bodyparser**
 > - 设置IP地址白名单
 > - 获取连接地址
 
-如果连接mongodb过程中出现以下错误，可以尝试设置付款方式
+如果连接mongodb过程中出现以下错误，可以尝试设置付款方式/检查用户名&数据库名是否正确更改/等等再试
 
-```
+``` shell
 Error: querySrv ESERVFAIL _mongodb._tcp.vincentebase.yqjup.mongodb.net
     at QueryReqWrap.onresolve [as oncomplete] (dns.js:203:19) {
   errno: 'ESERVFAIL',
@@ -533,4 +533,119 @@ Error: queryTxt ESERVFAIL vincentebase.yqjup.mongodb.net
 
 [commit](https://github.com/vincenteliang/koa-restful/commit/b83cff0e2fbbb85334b6cacb45387aa86d31fc84)
 
-<!-- [commit]() -->
+## 第8章 JWT 在 Koa 框架中实现用户的认证与授权
+
+> 本章主要讲解 JWT 如何实现用户的认证与授权。从 Session 开始讲解过渡到 JWT，关键在于 Session 和 JWT 的对比。以及通过 Koa 框架的 JWT 中间件实现用户注册于授权登录功能。
+
+### 8-1 Session 简介
+
+- Session的优势
+  - 相比JWT，最大的优势就在于可以主动清除session了
+  - session保存在服务器端，相对较为安全
+  - 结合cookie使用，较为灵活，兼容性较好
+- Session的劣势
+  - cookie + session在跨域场景表现并不好
+  - 如果是分布式部署，需要做多机共享session机制
+  - 基于cookie的机制很容易被CSRF
+  - 查询session信息可能会有数据库查询操作
+- Session相关的概念介绍
+  - session: 主要存放在服务器端，相对安全
+  - cookie: 主要存放在客户端，并且不是很安全
+  - sessionStorage: 仅在当前会话下有效，关闭页面或浏览器后被清除
+  - localstorage: 除非被清除，否则永久保存
+
+### 8-2 JWT 简介
+
+#### 什么是JWT
+
+- JSON Web Token是一个开放标准（RFC 7519）
+- 定义了一种紧凑且独立的方式，可以将各方之间的信息作为JSON对象进行安全传输
+- 该信息可以验证和信任，因为是经过数字签名的
+
+#### JWT的构成
+
+- 头部（Header）
+  - typ: token的类型， 这里固定为JWT
+  - alg: 使用的hash算法，例如：HMACSHA256或者RSA
+  - 编码前: {"alg":"HS256","typ":"JWT"}
+  - Base64编码: 'eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9'
+- 有效载荷（Payload）
+  - 存储需要传递的信息，如用户ID、用户名等
+  - 还包含元数据，如过期时间、发布人等
+  - 与Header不同，Payload可以加密
+  - 编码前: {"user_id":"zhangsan"}
+  - Base64编码: 'eyJ1c2VyX2lkIjoiemhhbmdzYW4ifQ=='
+  - Base64Url编码: 'eyJ1c2VyX2lkIjoiemhhbmdzYW4ifQ'
+- 签名（Signature）
+  - 对Header和Payload部分进行签名
+  - 保证Token在传输的过程中没有被篡改或者损坏
+  - Signature = HMACSHA256(base64UrlEncode(header)+"."+base64UrlEncode(payload), secret)
+
+#### JWT工作原理
+
+<!-- ![JWT工作原理](#) -->
+<image src="https://blog-1251959181.cos.ap-beijing.myqcloud.com/posts/354/JWT.png" />
+
+### 8-3 JWT vs. Session
+
+|             |          JWT           |            Session             |
+| :---------: | :--------------------: | :----------------------------: |
+|  可拓展性   |      无缝水平拓展      |          适合垂直拓展          |
+|   安全性    | JS可修改JWT，签名+加密 |                                |
+| RESTful API |         无状态         |             有状态             |
+|    性能     | 传输信息多，请求开销大 | 需要查找用户信息，服务器开销大 |
+|   时效性    |    只有到期才可销毁    |       可以在服务器端更新       |
+
+### 8-4 在 Node.js 中使用 JWT
+
+> 操作步骤
+> - 安装 jsonwebtoken
+> - 签名
+> - 验证
+
+`npm i jsonwebtoken`
+
+```shell
+node
+> jwt = require('jsonwebtoken');
+> token = jwt.sign({name: 'vincente'}, 'secret');
+> jwt.decode(token);
+> jwt.verify(token, 'secret');
+```
+
+### 8-5 实现用户注册
+
+> 操作步骤
+> - 设计用户Schema
+> - 编写保证唯一性的逻辑
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/b84be5ce15adaa2088e4b4a115c0c8417b844bff)
+
+### 8-6 实现登录并获取 Token
+
+> 操作步骤
+> - 登录接口设计
+> - 用jsonwebtoken生成token
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/8d617dc9ec1c04c963741b472ff7490dbb1f0759)
+
+### 8-7 自己编写 Koa 中间件实现用户认证与授权
+
+> 操作步骤
+> - 认证：验证token ，并获取用户信息
+> - 授权：使用中间件保护接口
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/25221b3fe3298640c31b6597e7951812efadf32e)
+
+### 8-8 用 koa-jwt 中间件实现用户认证与授权
+
+> 操作步骤
+> - 安装 koa-jwt
+> - 使用中间件保护接口
+> - 使用中间件获取用户信息
+
+`npm i koa-jwt --save`
+
+[commit](https://github.com/vincenteliang/koa-restful/commit/ff9b13155806aa5185210f732a8d52a29a248843)
+
+<!-- [commit](https://github.com/vincenteliang/koa-restful/commit/) -->
