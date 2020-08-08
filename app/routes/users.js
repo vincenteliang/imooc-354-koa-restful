@@ -1,4 +1,4 @@
-const jsonwebtoken = require('jsonwebtoken');
+const jwt = require('koa-jwt');
 const Router = require('koa-router');
 const router = new Router({ prefix: '/users' });
 const {
@@ -8,17 +8,7 @@ const {
 
 const { secret } = require('../config');
 
-const auth = async (ctx, next) => {
-    const { authorization = '' } = ctx.request.header; // 短路语法，默认为空字符串
-    const token = authorization.replace('Bearer ', '');
-    try {
-        const user = jsonwebtoken.verify(token, secret);
-        ctx.state.user = user; // ctx.state通常用来存放用户信息
-    } catch (err) {
-        ctx.throw(401, err.message);
-    }
-    await next();
-}
+const auth = jwt({ secret });
 
 router.get('/', find);
 router.post('/', create);
